@@ -1,7 +1,6 @@
 "use client";
 
 import { useUser } from "@clerk/nextjs";
-import Image from "next/image";
 import React from "react";
 import { BiMenuAltLeft } from "react-icons/bi";
 
@@ -20,7 +19,7 @@ const Header = () => {
         </div>
 
         <div className="">
-          <Image
+          <img
             src={user?.imageUrl as string}
             alt="user"
             width={50}
