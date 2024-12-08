@@ -34,7 +34,6 @@ const SignUpForm = () => {
       await signUp.prepareEmailAddressVerification({
         strategy: "email_code",
       });
-
       setVerifying(true);
     } catch (err: any) {
       toast.error(err.errors[0].message);
@@ -56,6 +55,7 @@ const SignUpForm = () => {
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId });
         router.replace("/dashboard/home");
+        toast.success("Sign Up Successful");
       } else {
         console.error(JSON.stringify(completeSignUp, null, 2));
       }

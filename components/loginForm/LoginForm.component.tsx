@@ -36,7 +36,8 @@ const LoginForm = () => {
       if (result.status === "complete") {
         console.log(result);
         await setActive({ session: result.createdSessionId });
-        router.replace("/dashboard/home");
+        router.replace("/dahsboard/home");
+        toast.success("Login Successful");
       } else {
         console.log(result);
       }
@@ -57,6 +58,7 @@ const LoginForm = () => {
         redirectUrl: "/dashboard/home", // Redirect after successful login
         redirectUrlComplete: "/dashboard/home", // After OAuth flow completion
       });
+      toast.success("Login Successful");
     } catch (error) {
       console.error(`Error logging in with ${provider}:`, error);
     }

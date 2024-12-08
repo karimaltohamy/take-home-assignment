@@ -3,7 +3,7 @@
 import ServerItem from "@/components/serverItem/ServerItem.component";
 import { servers } from "@/constants/servers";
 import { Server } from "@/types";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const page = () => {
