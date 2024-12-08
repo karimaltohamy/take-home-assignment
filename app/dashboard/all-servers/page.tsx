@@ -6,10 +6,10 @@ import { Server } from "@/types";
 import React, { useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 
-const page = () => {
+const Page = () => {
   const [serversData, setServersData] = useState<Server[]>(servers);
   const [selectStatus, setSelectStatus] = useState<string>("all");
-  const [sortCriteria, setSortCriteria] = useState("name-asc");
+  const [sortCriteria, setSortCriteria] = useState<string>("name-asc");
 
   const handleSort = (criteria: string) => {
     setSortCriteria(criteria);
@@ -104,4 +104,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

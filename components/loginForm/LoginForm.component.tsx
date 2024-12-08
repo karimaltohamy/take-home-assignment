@@ -55,8 +55,8 @@ const LoginForm = () => {
     try {
       await signIn?.authenticateWithRedirect({
         strategy: provider,
-        redirectUrl: "/dashboard/home", // Redirect after successful login
-        redirectUrlComplete: "/dashboard/home", // After OAuth flow completion
+        redirectUrl: "/dashboard/home",
+        redirectUrlComplete: "/dashboard/home",
       });
       toast.success("Login Successful");
     } catch (error) {
@@ -75,7 +75,7 @@ const LoginForm = () => {
   return (
     <div className="form_content">
       <div className="head">
-        <h1 className="title">Let's Get Started</h1>
+        <h1 className="title">Let&lsquo;s Get Started</h1>
         <p className="desc">Sign in to continue</p>
       </div>
       <form onSubmit={handleSignIn} className="px-3 py-8">
@@ -110,7 +110,7 @@ const LoginForm = () => {
         </button>
 
         <p className="text-gray-500 text-sm mt-5 text-center">
-          Don't have an account ?{" "}
+          Don&lsquo;t have an account ?{" "}
           <Link href="/sign-up" className="text-primary font-semibold">
             Sign Up
           </Link>

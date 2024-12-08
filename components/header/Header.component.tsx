@@ -20,8 +20,8 @@ const Header = () => {
         </div>
 
         <div className="">
-          <img
-            src={user?.imageUrl}
+          <Image
+            src={user?.imageUrl as string}
             alt="user"
             width={50}
             height={50}

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Login - Take Home Assignment",
 };
 
-const page = () => {
+const Page = () => {
   return (
     <div className="h-screen w-screen flex items-center justify-center bg-[#F7F9FB] overflow-hidden">
       <LoginForm />
@@ -13,4 +13,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
